@@ -1,6 +1,6 @@
 
 {{#unless model.authenticated}}
-  Sign in to view or register your restaurant
+  <p>Sign in to view or register your restaurant</p>
 {{else}}
   {{#if model.user.restaurant}}
   <ul>
@@ -27,7 +27,7 @@
               }}
   </ul>
   {{else}}
-    Register your restaurant with FoodHubGrublr!
+    <p>Register your restaurant with FoodHubGrublr!</p>
     {{register-restaurant createRestaurant='registerRestaurant'}}
   {{/if}}
 {{/unless}}
