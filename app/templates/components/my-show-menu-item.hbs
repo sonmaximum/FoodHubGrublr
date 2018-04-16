@@ -1,10 +1,10 @@
 {{item.name}} - ${{number-format item.price decimals=2}}<br>
 {{item.description}}
 {{#if item.editable}}
-    <span {{action 'editSingle' model}}>
+    <span {{action 'editSingle' item}}>
       {{fa-icon "pencil"}}
     </span>
-    <span {{action 'delete' model}}>
+    <span {{action 'delete' item}}>
       {{fa-icon "trash"}}
     </span>
   {{/if}}<br><br>
