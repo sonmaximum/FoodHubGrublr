@@ -3,7 +3,10 @@ import DS from 'ember-data'
 export default DS.Model.extend({
   name: DS.attr('string'),
   address: DS.attr('string'),
-  phone: DS.attr('integer'),
+  phoneNumber: DS.attr('string'),
   description: DS.attr('string'),
-  user: DS.belongsTo('user')
+  user: DS.belongsTo('user'),
+  menu: DS.belongsTo('menu'),
+  editable: DS.attr('boolean'),
+  restaurantCuisines: DS.hasMany('restaurantCuisine')
 })

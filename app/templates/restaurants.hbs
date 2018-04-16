@@ -1,0 +1,7 @@
+{{#link-to 'my-restaurant'}}Restaurant owners click here{{/link-to}}
+{{outlet}}
+<ul>
+{{#each model as |restaurant|}}
+  <li>{{#link-to 'restaurant' restaurant}}{{restaurant.name}}{{/link-to}}</li>
+{{/each}}
+</ul>

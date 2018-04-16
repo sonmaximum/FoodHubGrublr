@@ -14,6 +14,9 @@ export default Route.extend({
       user = this.get('store').findRecord('user', this.get('auth.credentials.id'))
     }
     this.get('store').findAll('restaurant')
+    this.get('store').findAll('menu')
+    this.get('store').findAll('menuSection')
+    this.get('store').findAll('menuItem')
     return RSVP.hash({
       authenticated: this.get('auth.isAuthenticated'),
       user: user

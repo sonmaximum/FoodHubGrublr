@@ -12,6 +12,8 @@ Router.map(function () {
   this.route('change-password')
   this.route('my-restaurant')
   this.route('not-found', { path: '/*path' })
+  this.route('restaurants')
+  this.route('restaurant', { path: '/restaurants/:restaurant_id' })
 })
 
 export default Router

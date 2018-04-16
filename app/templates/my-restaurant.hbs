@@ -3,10 +3,19 @@
   Sign in to view or register your restaurant
 {{else}}
   {{#if model.user.restaurant}}
-    {{model.user.restaurant.name}}
-    {{model.user.restaurant.address}}
+  <ul>
+    <li>{{model.user.restaurant.name}}</li>
+    <li>{{model.user.restaurant.description}}</li>
+    <li>{{model.user.restaurant.address}}</li>
+    <li>{{model.user.restaurant.phoneNumber}}</li>
+    {{#each model.user.restaurant.restaurantCuisines as |rc|}}
+      {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
+    {{/each}}
+    {{show-menu menu=model.user.restaurant.menu}}
+  </ul>
   {{else}}
     Make a restaurant!
   {{/if}}
 {{/unless}}
+{{#link-to 'application'}}Go Home{{/link-to}}
 {{outlet}}
