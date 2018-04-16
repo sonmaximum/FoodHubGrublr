@@ -1,8 +1,8 @@
 import { moduleForModel, test } from 'ember-qunit'
 
-moduleForModel('example', 'Unit | Model | example', {
+moduleForModel('cuisine', 'Unit | Model | cuisine', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:restaurant-cuisine']
 })
 
 test('it exists', function (assert) {
