@@ -1,9 +1,9 @@
 {{outlet}}
+<h2>{{model.name}}</h2>
 <ul>
-  <li>{{model.name}}</li>
   <li>{{model.description}}</li>
   <li>{{model.address}}</li>
-  <li>{{model.phoneNumber}}</li>
+  <li>{{format-phone model.phoneNumber}}</li>
   {{#each model.restaurantCuisines as |rc|}}
     {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
   {{/each}}

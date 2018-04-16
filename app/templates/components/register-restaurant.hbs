@@ -1,1 +1,13 @@
-{{yield}}
+<form {{action 'newRestaurant' on='submit'}}>
+  <div class="form-group">
+    <label for="createRestaurantName">Restaurant Name</label>
+    {{input type="text" class="form-control" id="createRestaurantName" placeholder="Restaurant Name" value=newRestaurantObj.name}}
+    <label for="createRestaurantDesc">Restaurant Description</label>
+    {{input type="text" class="form-control" id="createRestaurantDesc" placeholder="Restaurant Description" value=newRestaurantObj.description}}
+    <label for="createRestaurantAddress">Restaurant Address</label>
+    {{input type="text" class="form-control" id="createRestaurantAddress" placeholder="Restaurant Address" value=newRestaurantObj.address}}
+    <label for="createRestaurantPhoneNumber">Phone Number</label>
+    {{input type="text" class="form-control" id="createRestaurantPhoneNumber" placeholder="Phone Number" value=newRestaurantObj.phoneNumber}}
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

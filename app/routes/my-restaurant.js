@@ -21,5 +21,11 @@ export default Route.extend({
       authenticated: this.get('auth.isAuthenticated'),
       user: user
     })
+  },
+  actions: {
+    registerRestaurant (restaurant) {
+      this.get('store').createRecord('restaurant', restaurant).save()
+        .then((restaurant) => this.get('store').createRecord('menu', {restaurant_id: restaurant.id}).save())
+    }
   }
 })
