@@ -31,7 +31,7 @@ export default Route.extend({
       this.get('store').createRecord('menuSection', menuSection).save()
     },
     createMenuItem (menuItem) {
-      this.get('store').createRecord('menuItem', menuItem).save
+      this.get('store').createRecord('menuItem', menuItem).save()
     }
   }
 })

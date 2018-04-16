@@ -4,14 +4,24 @@
 {{else}}
   {{#if model.user.restaurant}}
   <ul>
-    <li>{{model.user.restaurant.name}}</li>
+    <h2>
+      {{model.user.restaurant.name}}
+      {{#if model.user.restaurant.editable}}
+        <span {{action 'editSingle' model}}>
+          {{fa-icon "pencil"}}
+        </span>
+        <span {{action 'delete' model}}>
+          {{fa-icon "trash"}}
+        </span>
+      {{/if}}
+    </h2>
     <li>{{model.user.restaurant.description}}</li>
     <li>{{model.user.restaurant.address}}</li>
     <li>{{model.user.restaurant.phoneNumber}}</li>
     {{#each model.user.restaurant.restaurantCuisines as |rc|}}
       {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
     {{/each}}
-    {{show-menu menu=model.user.restaurant.menu
+    {{my-show-menu menu=model.user.restaurant.menu
                 createMenuSection='createMenuSection'
                 createMenuItem='createMenuItem'
               }}

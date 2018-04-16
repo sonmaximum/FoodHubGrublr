@@ -1,0 +1,19 @@
+<h4>
+  {{menuSection.heading}}
+  {{#if menuSection.editable}}
+    <span {{action 'editSingle' model}}>
+      {{fa-icon "pencil"}}
+    </span>
+    <span {{action 'delete' model}}>
+      {{fa-icon "trash"}}
+    </span>
+  {{/if}}
+</h4>
+{{#each menuSection.menuItems as |menuItem|}}
+  {{my-show-menu-item item=menuItem}}
+{{/each}}
+{{#if menuSection.editable}}
+  {{new-menu-item menuSection=menuSection
+                  createMenuItem='createMenuItem'
+                }}
+{{/if}}

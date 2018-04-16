@@ -1,0 +1,8 @@
+{{#each menu.menuSections as |menuSection|}}
+  {{my-show-menu-section menuSection=menuSection
+                      createMenuItem=createMenuItem
+                    }}
+{{/each}}
+{{#if menu.editable}}
+  {{new-menu-section createMenuSection='createMenuSection'}}
+{{/if}}

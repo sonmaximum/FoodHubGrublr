@@ -1,4 +1,5 @@
 {{#each menu.menuSections as |menuSection|}}
-  {{show-menu-section menuSection=menuSection}}
+  {{show-menu-section menuSection=menuSection
+                      createMenuItem=createMenuItem
+                    }}
 {{/each}}
-{{new-menu-section createMenuSection='createMenuSection'}}
