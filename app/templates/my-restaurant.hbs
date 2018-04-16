@@ -11,10 +11,13 @@
     {{#each model.user.restaurant.restaurantCuisines as |rc|}}
       {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
     {{/each}}
-    {{show-menu menu=model.user.restaurant.menu}}
+    {{show-menu menu=model.user.restaurant.menu
+                createMenuSection='createMenuSection'
+                createMenuItem='createMenuItem'
+              }}
   </ul>
   {{else}}
-    Make a restaurant!
+    Register your restaurant with FoodHubGrublr!
     {{register-restaurant createRestaurant='registerRestaurant'}}
   {{/if}}
 {{/unless}}

@@ -1,6 +1,4 @@
 {{#each menu.menuSections as |menuSection|}}
-  <h4>{{menuSection.heading}}</h4>
-  {{#each menuSection.menuItems as |menuItem|}}
-    {{show-menu-item item=menuItem}}
-  {{/each}}
+  {{show-menu-section menuSection=menuSection}}
 {{/each}}
+{{new-menu-section createMenuSection='createMenuSection'}}

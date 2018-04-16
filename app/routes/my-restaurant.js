@@ -26,6 +26,12 @@ export default Route.extend({
     registerRestaurant (restaurant) {
       this.get('store').createRecord('restaurant', restaurant).save()
         .then((restaurant) => this.get('store').createRecord('menu', {restaurant_id: restaurant.id}).save())
+    },
+    createMenuSection (menuSection) {
+      this.get('store').createRecord('menuSection', menuSection).save()
+    },
+    createMenuItem (menuItem) {
+      this.get('store').createRecord('menuItem', menuItem).save
     }
   }
 })
