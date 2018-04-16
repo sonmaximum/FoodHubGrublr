@@ -1,0 +1,12 @@
+
+{{#unless model.authenticated}}
+  Sign in to view or register your restaurant
+{{else}}
+  {{#if model.user.restaurant}}
+    {{model.user.restaurant.name}}
+    {{model.user.restaurant.address}}
+  {{else}}
+    Make a restaurant!
+  {{/if}}
+{{/unless}}
+{{outlet}}
