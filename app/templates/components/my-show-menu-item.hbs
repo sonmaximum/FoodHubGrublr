@@ -1,7 +1,7 @@
 {{item.name}} - ${{number-format item.price decimals=2}}<br>
 {{item.description}}
 {{#if item.editable}}
-    <span {{action 'editSingle' item}}>
+    <span {{action 'editSingleItem' item}}>
       {{fa-icon "pencil"}}
     </span>
     {{#confirm-dialog

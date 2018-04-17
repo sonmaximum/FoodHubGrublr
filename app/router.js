@@ -14,11 +14,9 @@ Router.map(function () {
   this.route('not-found', { path: '/*path' })
   this.route('restaurants')
   this.route('restaurant', { path: '/restaurants/:restaurant_id' })
-  this.route('edit-restaurant');
-  this.route('edit-menu-section');
-  this.route('edit-menu-item');
-  this.route('menu-item');
-  this.route('menu-section');
+  this.route('edit-restaurant', { path: '/restaurants/:restaurant_id/edit' })
+  this.route('edit-menu-section', { path: '/menu-section/:menu-section_id/edit' })
+  this.route('edit-menu-item', { path: '/menu-item/:menu-item_id/edit' })
 })
 
 export default Router

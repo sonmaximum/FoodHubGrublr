@@ -13,6 +13,12 @@ export default Component.extend({
     },
     deleteSection (menuSection) {
       this.sendAction('deleteSection', menuSection)
+    },
+    editSingleItem (menuItem) {
+      this.sendAction('editSingleItem', menuItem)
+    },
+    editSection (section) {
+      this.sendAction('editSection', section)
     }
   }
 })

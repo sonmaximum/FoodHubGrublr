@@ -1,7 +1,7 @@
 <h4>
   {{menuSection.heading}}
   {{#if menuSection.editable}}
-    <span {{action 'editSingle' model}}>
+    <span {{action 'editSection' menuSection}}>
       {{fa-icon "pencil"}}
     </span>
     {{#confirm-dialog
@@ -15,7 +15,7 @@
     okCssIcon="fa fa-check-circle-o"
     cancelCssIcon="fa fa-ban"
     }}
-    <span {{action 'deleteSection' model}}>
+    <span {{action 'deleteSection'  menuSection}}>
       {{fa-icon "trash"}}
     </span>
     {{/confirm-dialog}}
@@ -24,6 +24,7 @@
 {{#each menuSection.menuItems as |menuItem|}}
   {{my-show-menu-item item=menuItem
                       deleteItem='deleteMenuItem'
+                      editSingleItem='editSingleItem'
                     }}
 {{/each}}
 {{#if menuSection.editable}}

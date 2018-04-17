@@ -41,6 +41,15 @@ export default Route.extend({
     },
     deleteRestaurant (pO) {
       pO.then((result) => result.destroyRecord())
+    },
+    editSingleItem (menuItem) {
+      this.transitionTo('edit-menu-item', menuItem.id)
+    },
+    editSection (section) {
+      this.transitionTo('edit-menu-section', section.id)
+    },
+    editRestaurant (pO) {
+      pO.then((result) => this.transitionTo('edit-restaurant', result.id))
     }
   }
 })

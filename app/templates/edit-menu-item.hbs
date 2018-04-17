@@ -1,1 +1,15 @@
-{{outlet}}
+<h3>Edit Menu Item</h3>
+  {{!-- {{render-all-examples examples=model}} --}}
+{{#if model.editable}}
+  <div>
+    <form {{action 'saveItem' model on='submit'}}>
+      {{input type="text" class="form-control" placeholder="Menu Item Name" value=model.name}}
+      {{input type="text" class="form-control" placeholder="Menu Item Description" value=model.description}}
+      {{input type="text" class="form-control" placeholder="Price (in dollars and cents, no dollar sign)" value=model.price}}
+    <button type="submit" class="btn btn-primary"> Update Menu Item </button>
+  </form>
+  </div>
+{{else}}
+<h4>You are not authorized to edit this menu item.</h4>
+{{/if}}
+{{#link-to "my-restaurant"}}Back to "My Restaurant"{{/link-to}}

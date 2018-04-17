@@ -23,12 +23,12 @@ export default Route.extend({
       console.error(reason)
 
       const unauthorized = reason.errors && reason.errors.some((error) =>
-        error.status === '401'
+        error.status === '401' || error.status === '404'
       )
 
       if (unauthorized) {
         this.get('flashMessages')
-          .danger('You must be authenticated to access this page.')
+          .danger('You must be correctly authenticated to access this page.')
         this.transitionTo('/sign-in')
       } else {
         this.get('flashMessages')

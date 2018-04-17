@@ -1,1 +1,13 @@
-{{outlet}}
+<h3>Edit Menu Section</h3>
+  {{!-- {{render-all-examples examples=model}} --}}
+{{#if model.editable}}
+  <div>
+    <form {{action 'saveSection' model on='submit'}}>
+      {{input type="text" class="form-control" id="createMenuSection" placeholder="Menu Section Heading" value=model.heading}}
+    <button type="submit" class="btn btn-primary"> Update Menu Section </button>
+  </form>
+  </div>
+{{else}}
+<h4>You are not authorized to edit this menu section.</h4>
+{{/if}}
+{{#link-to "my-restaurant"}}Back to "My Restaurant"{{/link-to}}

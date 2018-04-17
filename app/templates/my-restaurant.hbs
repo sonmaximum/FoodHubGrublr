@@ -7,7 +7,7 @@
     <h2>
       {{model.user.restaurant.name}}
       {{#if model.user.restaurant.editable}}
-        <span {{action 'editSingle' model}}>
+        <span {{action 'editRestaurant' model.user.restaurant}}>
           {{fa-icon "pencil"}}
         </span>
         {{#confirm-dialog
@@ -38,6 +38,8 @@
                 createMenuItem='createMenuItem'
                 deleteMenuItem='deleteMenuItem'
                 deleteSection='deleteSection'
+                editSingleItem='editSingleItem'
+                editSection='editSection'
               }}
   </ul>
   {{else}}

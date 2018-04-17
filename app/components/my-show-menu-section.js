@@ -8,8 +8,14 @@ export default Component.extend({
     deleteMenuItem (menuItem) {
       this.sendAction('deleteMenuItem', menuItem)
     },
-    deleteSection () {
-      this.sendAction('deleteSection', this.get('menuSection'))
+    deleteSection (section) {
+      this.sendAction('deleteSection', section)
+    },
+    editSingleItem (menuItem) {
+      this.sendAction('editSingleItem', menuItem)
+    },
+    editSection (section) {
+      this.sendAction('editSection', section)
     }
   }
 })
