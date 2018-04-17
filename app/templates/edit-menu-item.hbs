@@ -3,9 +3,9 @@
 {{#if model.editable}}
   <div>
     <form {{action 'saveItem' model on='submit'}}>
-      {{input type="text" class="form-control" placeholder="Menu Item Name" value=model.name}}
-      {{input type="text" class="form-control" placeholder="Menu Item Description" value=model.description}}
-      {{input type="text" class="form-control" placeholder="Price (in dollars and cents, no dollar sign)" value=model.price}}
+      {{input type="text" class="form-control" placeholder="Menu Item Name" value=model.name required=true}}
+      {{input type="text" class="form-control" placeholder="Menu Item Description" value=model.description required=true}}
+      {{input type="number" step="0.01" class="form-control" placeholder="Price (in dollars and cents, no dollar sign)" value=model.price required=true}}
     <button type="submit" class="btn btn-primary"> Update Menu Item </button>
   </form>
   </div>

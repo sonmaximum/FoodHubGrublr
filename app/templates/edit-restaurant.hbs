@@ -1,13 +1,13 @@
 <form {{action 'saveRestaurant' model on='submit'}}>
   <div class="form-group">
     <label for="createRestaurantName">Restaurant Name</label>
-    {{input type="text" class="form-control" id="createRestaurantName" placeholder="Restaurant Name" value=model.name}}
+    {{input type="text" class="form-control" id="createRestaurantName" placeholder="Restaurant Name" value=model.name required=true}}
     <label for="createRestaurantDesc">Restaurant Description</label>
-    {{input type="text" class="form-control" id="createRestaurantDesc" placeholder="Restaurant Description" value=model.description}}
+    {{input type="text" class="form-control" id="createRestaurantDesc" placeholder="Restaurant Description" value=model.description required=true}}
     <label for="createRestaurantAddress">Restaurant Address</label>
-    {{input type="text" class="form-control" id="createRestaurantAddress" placeholder="Restaurant Address" value=model.address}}
+    {{input type="text" class="form-control" id="createRestaurantAddress" placeholder="Restaurant Address" value=model.address required=true}}
     <label for="createRestaurantPhoneNumber">Phone Number</label>
-    {{input type="text" class="form-control" id="createRestaurantPhoneNumber" placeholder="Phone Number" value=model.phoneNumber}}
+    {{input minlength="10" type="tel" class="form-control" id="createRestaurantPhoneNumber" placeholder="Phone Number" value=model.phoneNumber required=true}}
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -1,9 +1,9 @@
 <form {{action 'createMenuItem' on='submit'}}>
   <div class="form-group">
     <label>Add an item to this menu section</label>
-    {{input type="text" class="form-control" placeholder="Menu Item Name" value=newMenuItem.name}}
-    {{input type="text" class="form-control" placeholder="Menu Item Description" value=newMenuItem.description}}
-    {{input type="text" class="form-control" placeholder="Price (in dollars and cents, no dollar sign)" value=newMenuItem.price}}
+    {{input type="text" class="form-control" placeholder="Menu Item Name" value=newMenuItem.name  required=true}}
+    {{input type="text" class="form-control" placeholder="Menu Item Description" value=newMenuItem.description  required=true}}
+    {{input type="number" step="0.01" class="form-control" placeholder="Price (in dollars and cents, no dollar sign)" value=newMenuItem.price  required=true}}
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

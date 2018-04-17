@@ -3,7 +3,7 @@
 {{#if model.editable}}
   <div>
     <form {{action 'saveSection' model on='submit'}}>
-      {{input type="text" class="form-control" id="createMenuSection" placeholder="Menu Section Heading" value=model.heading}}
+      {{input type="text" class="form-control" id="createMenuSection" placeholder="Menu Section Heading" value=model.heading required=true}}
     <button type="submit" class="btn btn-primary"> Update Menu Section </button>
   </form>
   </div>
