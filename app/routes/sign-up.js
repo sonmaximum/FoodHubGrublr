@@ -15,6 +15,7 @@ export default Route.extend({
       this.get('auth').signUp(credentials)
         .then(() => this.get('auth').signIn(credentials))
         .then(() => this.transitionTo('restaurants'))
+        .then(() => this.get('store').createRecord('cart').save())
         .then(() => {
           this.get('flashMessages')
             .success('Successfully signed-up! You have also been signed-in.')
