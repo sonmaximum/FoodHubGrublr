@@ -32,6 +32,15 @@ export default Route.extend({
     },
     createMenuItem (menuItem) {
       this.get('store').createRecord('menuItem', menuItem).save()
+    },
+    deleteMenuItem (menuItem) {
+      menuItem.destroyRecord()
+    },
+    deleteSection (menuSection) {
+      menuSection.destroyRecord()
+    },
+    deleteRestaurant (pO) {
+      pO.then((result) => result.destroyRecord())
     }
   }
 })

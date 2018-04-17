@@ -7,6 +7,12 @@ export default Component.extend({
     },
     createMenuItem (menuItem) {
       this.sendAction('createMenuItem', menuItem)
+    },
+    deleteMenuItem (menuItem) {
+      this.sendAction('deleteMenuItem', menuItem)
+    },
+    deleteSection (menuSection) {
+      this.sendAction('deleteSection', menuSection)
     }
   }
 })

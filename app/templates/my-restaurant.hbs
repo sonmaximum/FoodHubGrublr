@@ -10,20 +10,34 @@
         <span {{action 'editSingle' model}}>
           {{fa-icon "pencil"}}
         </span>
-        <span {{action 'delete' model}}>
-          {{fa-icon "trash"}}
-        </span>
+        {{#confirm-dialog
+        dialogClass="delete-confirm-dialog"
+        title="Confirm delete"
+        text="Are you sure you want to delete your restaurant? (Its entire menu will also be deleted.)"
+        confirmButtonClass="btn btn-danger"
+        cancelButtonClass="btn btn-default"
+        confirmButton="Delete"
+        cancelButton="Cancel"
+        okCssIcon="fa fa-check-circle-o"
+        cancelCssIcon="fa fa-ban"
+      }}
+          <span {{action 'deleteRestaurant' model.user.restaurant}}>
+            {{fa-icon "trash"}}
+          </span>
+        {{/confirm-dialog}}
       {{/if}}
     </h2>
     <li>{{model.user.restaurant.description}}</li>
     <li>{{model.user.restaurant.address}}</li>
-    <li>{{model.user.restaurant.phoneNumber}}</li>
+    <li>{{format-phone model.user.restaurant.phoneNumber}}</li>
     {{#each model.user.restaurant.restaurantCuisines as |rc|}}
       {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
     {{/each}}
     {{my-show-menu menu=model.user.restaurant.menu
                 createMenuSection='createMenuSection'
                 createMenuItem='createMenuItem'
+                deleteMenuItem='deleteMenuItem'
+                deleteSection='deleteSection'
               }}
   </ul>
   {{else}}

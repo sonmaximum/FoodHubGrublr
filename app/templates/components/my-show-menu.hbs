@@ -1,6 +1,8 @@
 {{#each menu.menuSections as |menuSection|}}
   {{my-show-menu-section menuSection=menuSection
-                      createMenuItem=createMenuItem
+                      createMenuItem='createMenuItem'
+                      deleteMenuItem='deleteMenuItem'
+                      deleteSection='deleteSection'
                     }}
 {{/each}}
 {{#if menu.editable}}

@@ -4,13 +4,27 @@
     <span {{action 'editSingle' model}}>
       {{fa-icon "pencil"}}
     </span>
-    <span {{action 'delete' model}}>
+    {{#confirm-dialog
+    dialogClass="delete-confirm-dialog"
+    title="Confirm delete"
+    text="Are you sure you want to delete this section and all of its items?"
+    confirmButtonClass="btn btn-danger"
+    cancelButtonClass="btn btn-default"
+    confirmButton="Delete"
+    cancelButton="Cancel"
+    okCssIcon="fa fa-check-circle-o"
+    cancelCssIcon="fa fa-ban"
+    }}
+    <span {{action 'deleteSection' model}}>
       {{fa-icon "trash"}}
     </span>
+    {{/confirm-dialog}}
   {{/if}}
 </h4>
 {{#each menuSection.menuItems as |menuItem|}}
-  {{my-show-menu-item item=menuItem}}
+  {{my-show-menu-item item=menuItem
+                      deleteItem='deleteMenuItem'
+                    }}
 {{/each}}
 {{#if menuSection.editable}}
   {{new-menu-item menuSection=menuSection

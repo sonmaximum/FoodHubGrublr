@@ -14,6 +14,11 @@ Router.map(function () {
   this.route('not-found', { path: '/*path' })
   this.route('restaurants')
   this.route('restaurant', { path: '/restaurants/:restaurant_id' })
+  this.route('edit-restaurant');
+  this.route('edit-menu-section');
+  this.route('edit-menu-item');
+  this.route('menu-item');
+  this.route('menu-section');
 })
 
 export default Router
