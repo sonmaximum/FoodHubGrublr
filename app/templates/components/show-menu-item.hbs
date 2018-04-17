@@ -1,2 +1,2 @@
 <p>{{item.name}} - ${{number-format item.price decimals=2}}<br>
-  {{item.description}} <small>Add to Cart</small></p>
+  {{item.description}} {{#link-to 'add-to-cart' item}}<small>Add to Cart</small>{{/link-to}}</p>

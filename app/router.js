@@ -15,8 +15,9 @@ Router.map(function () {
   this.route('restaurants')
   this.route('restaurant', { path: '/restaurants/:restaurant_id' })
   this.route('edit-restaurant', { path: '/restaurants/:restaurant_id/edit' })
-  this.route('edit-menu-section', { path: '/menu-section/:menu-section_id/edit' })
-  this.route('edit-menu-item', { path: '/menu-item/:menu-item_id/edit' })
+  this.route('edit-menu-section', { path: '/menu-sections/:menu_section_id/edit' })
+  this.route('edit-menu-item', { path: '/menu-items/:menu_item_id/edit' })
+  this.route('add-to-cart', { path: '/menu-items/:menu_item_id/' })
 })
 
 export default Router

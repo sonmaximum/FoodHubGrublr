@@ -1,0 +1,22 @@
+{{#if isAuthenticated}}
+  <p> {{model.name}} - ${{number-format model.price decimals=2}}<br>
+      {{model.description}}
+      <form {{action 'createOrder' model model.menuSection.menu.restaurant.id on='submit'}}>
+        <div class="row">
+      <div class="form-group col-sm-3">
+        <label for="item-quantity">Quantity</label>
+        {{input type="number" class="form-control" id="item-quantity" value=newOrderObj.quantity placeholder="Quantity"}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-3">
+        <label for="special-requests">Special Requests</label>
+        {{textarea class="form-control" id="special-requests" placeholder="Special Requests" value=newOrderObj.comment rows="3"}}
+      </div>
+    </div>
+      <button type="submit" class="btn btn-primary">Add to Cart {{fa-icon "shopping-cart"}}</button>
+    </form>
+  </p>
+{{else}}
+Please log in to add items to your cart.
+{{/if}}

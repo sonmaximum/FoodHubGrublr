@@ -17,6 +17,7 @@ export default Route.extend({
     this.get('store').findAll('menu')
     this.get('store').findAll('menuSection')
     this.get('store').findAll('menuItem')
+    this.get('store').findAll('restaurantCuisine')
     return RSVP.hash({
       authenticated: this.get('auth.isAuthenticated'),
       user: user

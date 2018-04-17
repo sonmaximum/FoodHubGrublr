@@ -5,5 +5,6 @@ export default DS.Model.extend({
   cart: DS.belongsTo('cart'),
   menuItem: DS.belongsTo('menu-item'),
   user: DS.belongsTo('user'),
+  comment: DS.attr('string'),
   editable: DS.attr('boolean')
 })
