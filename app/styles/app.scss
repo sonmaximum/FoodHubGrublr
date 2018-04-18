@@ -1,6 +1,6 @@
-@import "ember-bootstrap/bootstrap";
-@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";
+@import 'ember-bootstrap/bootstrap';
+@import 'ember-modal-dialog/ember-modal-structure';
+@import 'ember-modal-dialog/ember-modal-appearance';
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush|Fascinate+Inline');
 
 h1 {
@@ -9,13 +9,14 @@ h1 {
   margin: 0 auto 10px;
   text-align: center;
   width: 60%;
+
   span {
     font-family: 'Fascinate Inline', cursive;
   }
 }
 
 .navbar {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 ul {
@@ -26,9 +27,9 @@ ul {
   padding: 10px;
 }
 
-.inactiveLink {
+.inactive-link {
   cursor: default;
-   pointer-events: none;
+  pointer-events: none;
 }
 
 body {
@@ -46,5 +47,8 @@ body {
 }
 
 .owner-link {
+  margin: 0 auto;
+  font-size: .85em;
   text-align: center;
+  margin-top: -10px;
 }
