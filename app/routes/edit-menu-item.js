@@ -5,6 +5,10 @@ export default Route.extend({
     saveItem (model) {
       model.save()
         .then(() => this.transitionTo('my-restaurant'))
+        .then(() => {
+          this.get('flashMessages')
+          .success('Item updated successfully!')
+        })
     }
   }
 })

@@ -18,6 +18,8 @@ Router.map(function () {
   this.route('edit-menu-section', { path: '/menu-sections/:menu_section_id/edit' })
   this.route('edit-menu-item', { path: '/menu-items/:menu_item_id/edit' })
   this.route('add-to-cart', { path: '/menu-items/:menu_item_id/' })
+  this.route('cart')
+  this.route('edit-cart', {path: '/order-items/:order_item_id/'})
 })
 
 export default Router

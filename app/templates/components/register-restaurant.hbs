@@ -7,7 +7,7 @@
     <label for="createRestaurantAddress">Restaurant Address</label>
     {{input type="text" class="form-control" id="createRestaurantAddress" placeholder="Restaurant Address" value=newRestaurantObj.address required=true}}
     <label for="createRestaurantPhoneNumber">Phone Number</label>
-    {{input  minlength="10" type="text" pattern="[1-9]{1}[0-9]{9}" type="text" class="form-control" id="createRestaurantPhoneNumber" placeholder="Phone Number (ten digits)" value=newRestaurantObj.phoneNumber required=true}}
+    {{input  minlength="10" type="text" pattern="[a-zA-Z0-9]{10}" type="text" class="form-control" id="createRestaurantPhoneNumber" placeholder="Phone Number (ten digits)" value=newRestaurantObj.phoneNumber required=true}}
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

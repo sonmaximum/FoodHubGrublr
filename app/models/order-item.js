@@ -6,5 +6,8 @@ export default DS.Model.extend({
   menuItem: DS.belongsTo('menu-item'),
   user: DS.belongsTo('user'),
   comment: DS.attr('string'),
-  editable: DS.attr('boolean')
+  editable: DS.attr('boolean'),
+  total: Ember.computed('quantity', 'menuItem.price', function () {
+    return this.get('menuItem.price') * this.get('quantity')
+  })
 })

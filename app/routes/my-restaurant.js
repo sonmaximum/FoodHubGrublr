@@ -13,11 +13,14 @@ export default Route.extend({
     if (this.get('auth.isAuthenticated')) {
       user = this.get('store').findRecord('user', this.get('auth.credentials.id'))
     }
+    this.get('store').findAll('restaurantCuisine')
     this.get('store').findAll('restaurant')
     this.get('store').findAll('menu')
     this.get('store').findAll('menuSection')
     this.get('store').findAll('menuItem')
-    this.get('store').findAll('restaurantCuisine')
+    this.get('store').findAll('cuisine')
+    user.get('restaurant.restaurantCuisine')
+
     return RSVP.hash({
       authenticated: this.get('auth.isAuthenticated'),
       user: user
