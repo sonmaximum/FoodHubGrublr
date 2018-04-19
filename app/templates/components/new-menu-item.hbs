@@ -3,7 +3,7 @@
     <label>Add an item to this menu section</label>
     {{input type="text" class="form-control" placeholder="Menu Item Name" value=newMenuItem.name  required=true}}
     {{input type="text" class="form-control" placeholder="Menu Item Description" value=newMenuItem.description  required=true}}
-    {{input type="number" step="0.01" class="form-control" placeholder="Price (in dollars and cents, no dollar sign)" value=newMenuItem.price  required=true}}
+    {{input type="number" step="0.01" class="form-control" min='0.01' placeholder="Price (in dollars and cents, no dollar sign)" value=newMenuItem.price  required=true}}
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
