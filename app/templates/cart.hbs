@@ -59,19 +59,18 @@
         <button class="btn btn-danger" {{action 'emptyCart' cart}}>Empty Cart</button>
       {{/confirm-dialog}}
     </div>
-    <div class="col-sm-3">
-      <form action="your-server-side-code" method="POST">
-        <script
-        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-        data-amount=999
-        data-name="Stripe.com"
-        data-description="Example charge"
-        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-        data-locale="auto"
-        data-zip-code="true">
-        </script>
-      </form>
+    <div class="col-sm-3 stripebutton">
+      {{stripe-checkout
+        name="FoodHubGrublr"
+        description="Online Delivery Order"
+        amount=cart.grandTotalCents
+        zip-code=true
+        billing-address="true"
+        image="https://media.licdn.com/dms/image/C4E03AQGJZiwDQrQxtg/profile-displayphoto-shrink_200_200/0?e=1529283600&v=beta&t=osSMaz1VqTILkNNXbshgNMhqh1URMuiCL-npJGBjop0"
+        locale="auto"
+        email=cart.user.email
+        onToken=(action "processStripeToken" cart.grandTotalCents cart)
+      }}
     </div>
     <div class="col-sm-3">Grand Total:</div>
     <div class="col-sm-3">

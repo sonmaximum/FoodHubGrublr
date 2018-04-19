@@ -35,6 +35,9 @@ module.exports = function (environment) {
       p + c.charCodeAt().toString(16), '')
     )
     ENV.apiHost = `http://localhost:${port}`
+    ENV.stripe = {
+      key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+    }
   }
 
   if (environment === 'test') {
@@ -47,12 +50,18 @@ module.exports = function (environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false
 
     ENV.APP.rootElement = '#ember-testing'
+    ENV.stripe = {
+      key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+    }
   }
 
   if (environment === 'production') {
     ENV.rootURL = '/FoodHubGrublr'
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://food-hub-grub-lr-api.herokuapp.com/'
+    ENV.stripe = {
+      key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+    }
   }
 
   return ENV

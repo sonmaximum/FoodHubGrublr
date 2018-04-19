@@ -7,6 +7,7 @@ import Route from '@ember/routing/route'
 export default Route.extend({
   auth: service(),
   isAuthenticated: alias('auth.isAuthenticated'),
+
   model () {
     return RSVP.hash({
       oI: this.get('store').findAll('orderItem'),

@@ -11,5 +11,8 @@ export default DS.Model.extend({
       total += item.get('total')
     })
     return total
+  }),
+  grandTotalCents: Ember.computed('grandTotal', function () {
+    return this.get('grandTotal') * 100
   })
 })
