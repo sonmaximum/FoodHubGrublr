@@ -33,6 +33,7 @@
         {{#each model.user.restaurant.restaurantCuisines as |rc|}}
           {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
         {{/each}}
+        {{!-- {{location-map location=model.user.restaurant.address}} --}}
         <br><br>
         {{my-show-menu menu=model.user.restaurant.menu
                     createMenuSection='createMenuSection'

@@ -1,14 +1,21 @@
 {{outlet}}
 <div class="main-content">
   <ul>
-  <h2>{{model.name}}</h2>
-    <li>{{model.description}}</li>
-    <li>{{model.address}}</li>
-    <li>{{format-phone model.phoneNumber}}</li>
-    {{#each model.restaurantCuisines as |rc|}}
-      {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
-    {{/each}}
-    <br><br>
+    <div class="row">
+      <div class="col-sm-6 menu-col">
+        <h2>{{model.name}}</h2>
+        <li>{{model.description}}</li>
+        <li>{{model.address}}</li>
+        <li>{{format-phone model.phoneNumber}}</li>
+        {{#each model.restaurantCuisines as |rc|}}
+          {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
+        {{/each}}
+        <br><br>
+      </div>
+      <div class="col-sm-6">
+        {{location-map location=model.address}}
+      </div>
+    </div>
     {{show-menu menu=model.menu}}
   </ul>
 {{#link-to 'application'}}Return to Restaurant list{{/link-to}}
