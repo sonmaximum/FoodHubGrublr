@@ -15,6 +15,34 @@ h1 {
   }
 }
 
+.main-content {
+  color: #444;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0 10px;
+}
+
+.restaurant-list {
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0 10px;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h3 {
+  margin-top: 5px;
+}
 .navbar {
   border-radius: 0;
 }

@@ -1,7 +1,11 @@
 <p class="owner-link">(Restaurant owners {{#link-to 'my-restaurant'}}click here{{/link-to}})</p>
 {{outlet}}
-<ul>
-{{#each model as |restaurant|}}
-  <li>{{#link-to 'restaurant' restaurant}}{{restaurant.name}}{{/link-to}}</li>
-{{/each}}
-</ul>
+<div class="restaurant-list">
+  Select a restaurant below!
+  <ul>
+  {{#each model as |restaurant|}}
+    <li><h3>{{#link-to 'restaurant' restaurant}}{{restaurant.name}}{{/link-to}}</h3>
+    {{restaurant.description}}</li>
+  {{/each}}
+  </ul>
+</div>

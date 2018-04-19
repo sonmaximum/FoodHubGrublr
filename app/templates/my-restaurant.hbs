@@ -1,51 +1,53 @@
-
-{{#unless model.authenticated}}
-  <p>Please sign in to view or register your restaurant.</p>
-{{else}}
-  {{#if model.user.restaurant}}
-  <ul>
-    <h2>
-      {{model.user.restaurant.name}}
-      {{#if model.user.restaurant.editable}}
-        <span {{action 'editRestaurant' model.user.restaurant}}>
-          {{fa-icon "pencil"}}
-        </span>
-        {{#confirm-dialog
-        dialogClass="delete-confirm-dialog"
-        title="Confirm delete"
-        text="Are you sure you want to delete your restaurant? (Its entire menu will also be deleted.)"
-        confirmButtonClass="btn btn-danger"
-        cancelButtonClass="btn btn-default"
-        confirmButton="Delete"
-        cancelButton="Cancel"
-        okCssIcon="fa fa-check-circle-o"
-        cancelCssIcon="fa fa-ban"
-      }}
-          <span {{action 'deleteRestaurant' model.user.restaurant}}>
-            {{fa-icon "trash"}}
-          </span>
-        {{/confirm-dialog}}
-      {{/if}}
-    </h2>
-    <li>{{model.user.restaurant.description}}</li>
-    <li>{{model.user.restaurant.address}}</li>
-    <li>{{format-phone model.user.restaurant.phoneNumber}}</li>
-    {{#each model.user.restaurant.restaurantCuisines as |rc|}}
-      {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
-    {{/each}}
-    {{my-show-menu menu=model.user.restaurant.menu
-                createMenuSection='createMenuSection'
-                createMenuItem='createMenuItem'
-                deleteMenuItem='deleteMenuItem'
-                deleteSection='deleteSection'
-                editSingleItem='editSingleItem'
-                editSection='editSection'
-              }}
-  </ul>
+<div class="main-content">
+  {{#unless model.authenticated}}
+    <p>Please sign in to view or register your restaurant.</p>
   {{else}}
-    <p>Register your restaurant with FoodHubGrublr!</p>
-    {{register-restaurant createRestaurant='registerRestaurant'}}
-  {{/if}}
-{{/unless}}
-{{#link-to 'application'}}Go Home{{/link-to}}
-{{outlet}}
+    {{#if model.user.restaurant}}
+      <ul>
+        <h2>
+          {{model.user.restaurant.name}}
+          {{#if model.user.restaurant.editable}}
+            <span {{action 'editRestaurant' model.user.restaurant}}>
+              {{fa-icon "pencil"}}
+            </span>
+            {{#confirm-dialog
+            dialogClass="delete-confirm-dialog"
+            title="Confirm delete"
+            text="Are you sure you want to delete your restaurant? (Its entire menu will also be deleted.)"
+            confirmButtonClass="btn btn-danger"
+            cancelButtonClass="btn btn-default"
+            confirmButton="Delete"
+            cancelButton="Cancel"
+            okCssIcon="fa fa-check-circle-o"
+            cancelCssIcon="fa fa-ban"
+          }}
+              <span {{action 'deleteRestaurant' model.user.restaurant}}>
+                {{fa-icon "trash"}}
+              </span>
+            {{/confirm-dialog}}
+          {{/if}}
+        </h2>
+        <li>{{model.user.restaurant.description}}</li>
+        <li>{{model.user.restaurant.address}}</li>
+        <li>{{format-phone model.user.restaurant.phoneNumber}}</li>
+        {{#each model.user.restaurant.restaurantCuisines as |rc|}}
+          {{rc.cuisine.cuisineType}}{{#unless (eq rc model.restaurantCuisines.lastObject)}}, {{/unless}}
+        {{/each}}
+        <br><br>
+        {{my-show-menu menu=model.user.restaurant.menu
+                    createMenuSection='createMenuSection'
+                    createMenuItem='createMenuItem'
+                    deleteMenuItem='deleteMenuItem'
+                    deleteSection='deleteSection'
+                    editSingleItem='editSingleItem'
+                    editSection='editSection'
+                  }}
+      </ul>
+    {{else}}
+      <p>Register your restaurant with FoodHubGrublr!</p>
+      {{register-restaurant createRestaurant='registerRestaurant'}}
+    {{/if}}
+  {{/unless}}
+  {{#link-to 'application'}}Go Home{{/link-to}}
+  {{outlet}}
+</div>

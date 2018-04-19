@@ -1,4 +1,4 @@
-<h4>
+<h3>
   {{menuSection.heading}}
   {{#if menuSection.editable}}
     <span {{action 'editSection' menuSection}}>
@@ -20,7 +20,7 @@
     </span>
     {{/confirm-dialog}}
   {{/if}}
-</h4>
+</h3>
 {{#each menuSection.menuItems as |menuItem|}}
   {{my-show-menu-item item=menuItem
                       deleteItem='deleteMenuItem'
