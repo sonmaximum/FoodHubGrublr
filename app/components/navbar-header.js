@@ -5,7 +5,7 @@ export default Component.extend({
   classNames: ['navbar-header'],
   actions: {
     rollback () {
-      console.log(this.get('store').reload())
+      this.get('store').reload()
     }
   }
 })

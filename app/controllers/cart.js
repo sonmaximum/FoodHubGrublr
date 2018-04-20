@@ -5,7 +5,6 @@ export default Controller.extend({
     // ...
   ajax: Ember.inject.service(),
   actions: {
-    logenv () { console.log(ENV.stripe) },
     processStripeToken (amount, cart, {card, email, id}) {
       this.get('flashMessages')
         .warning('Processing payment...')

@@ -20,7 +20,6 @@ export default Route.extend({
     },
 
     error (reason) {
-      console.error(reason)
       const unauthorized = reason.errors && reason.errors.some((error) =>
         error.status === '401' || error.status === '404'
       )
