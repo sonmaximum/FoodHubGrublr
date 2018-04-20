@@ -36,7 +36,7 @@ module.exports = function (environment) {
     )
     ENV.apiHost = `http://localhost:${port}`
     ENV.stripe = {
-      key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+      key: 'pk_test_Z1doN7EIBBlm06gANYRglpS2'
     }
     ENV['ember-simple-google-maps'] = {
       url: 'https://maps.googleapis.com/maps/api/js',
@@ -56,7 +56,7 @@ module.exports = function (environment) {
 
     ENV.APP.rootElement = '#ember-testing'
     ENV.stripe = {
-      key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+      key: 'pk_test_Z1doN7EIBBlm06gANYRglpS2'
     }
     ENV['ember-simple-google-maps'] = {
       url: 'https://maps.googleapis.com/maps/api/js',
@@ -70,7 +70,7 @@ module.exports = function (environment) {
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://food-hub-grub-lr-api.herokuapp.com/'
     ENV.stripe = {
-      key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+      key: 'pk_test_Z1doN7EIBBlm06gANYRglpS2'
     }
     ENV['ember-simple-google-maps'] = {
       url: 'https://maps.googleapis.com/maps/api/js',
