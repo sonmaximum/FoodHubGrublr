@@ -9,8 +9,6 @@ export default Component.extend({
 
   actions: {
     createMenuItem () {
-      console.log(this.get('newMenuItem'))
-      console.log(this.get('menuSection'))
       this.set('newMenuItem.menuSection', this.get('menuSection'))
       this.sendAction('createMenuItem', this.get('newMenuItem'))
       this.set('newMenuItem', {})

@@ -23,14 +23,12 @@ export default Service.extend({
       this.get('mapUtil').createMap(element, location)
       this.set(`cachedMaps.${camelizedLocation}`, element)
     }
-    console.log('1 elem is', element)
     return element
   },
 
   createMapElement () {
     const element = document.createElement('div')
     element.className = 'map'
-    console.log('2 elem is', element)
     return element
   }
 
