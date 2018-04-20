@@ -12,7 +12,7 @@ FoodHubGrublr's front end webclient is built with Ember.js, while its backend AP
   
 Deployed Front End: http://www.maxjuchheim.com/FoodHubGrublr/  
 Deployed Back End: https://food-hub-grub-lr-api.herokuapp.com/  
-Front End Repository:  https://github.com/sonmaximum/FoodHubGrublr
+Front End Repository:  https://github.com/sonmaximum/FoodHubGrublr  
 Back End Repository: https://github.com/sonmaximum/FoodHubGrublr-API 
 
 #### Development Process 
