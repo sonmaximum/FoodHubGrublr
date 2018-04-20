@@ -11,7 +11,6 @@ export default EmberObject.extend({
   createMap (element, location) {
     const map = new google.maps.Map(element, { scrollwheel: false, zoom: 15 })
     this.pinLocation(location, map)
-    console.log('new map?', map)
     return map
   },
 
@@ -22,7 +21,6 @@ export default EmberObject.extend({
         const position = { lat: geometry.lat(), lng: geometry.lng() }
         map.setCenter(position)
         new google.maps.Marker({ position, map, title: location })
-        console.log('wha?')
       }
     })
   }

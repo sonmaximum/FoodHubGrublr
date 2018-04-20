@@ -38,6 +38,11 @@ module.exports = function (environment) {
     ENV.stripe = {
       key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
     }
+    ENV['ember-simple-google-maps'] = {
+      url: 'https://maps.googleapis.com/maps/api/js',
+      version: '3.31',
+      apiKey: 'AIzaSyAxXDtsT0BphpRdrCQN9qEvarZA3_pvJBU'
+    }
   }
 
   if (environment === 'test') {
@@ -53,6 +58,11 @@ module.exports = function (environment) {
     ENV.stripe = {
       key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
     }
+    ENV['ember-simple-google-maps'] = {
+      url: 'https://maps.googleapis.com/maps/api/js',
+      version: '3.31',
+      apiKey: 'AIzaSyAxXDtsT0BphpRdrCQN9qEvarZA3_pvJBU'
+    }
   }
 
   if (environment === 'production') {
@@ -61,6 +71,11 @@ module.exports = function (environment) {
     ENV.apiHost = 'https://food-hub-grub-lr-api.herokuapp.com/'
     ENV.stripe = {
       key: 'pk_test_TWM0f7YY6TMXNPSI8cySTKol'
+    }
+    ENV['ember-simple-google-maps'] = {
+      url: 'https://maps.googleapis.com/maps/api/js',
+      version: '3.31',
+      apiKey: 'AIzaSyAxXDtsT0BphpRdrCQN9qEvarZA3_pvJBU'
     }
   }
 
