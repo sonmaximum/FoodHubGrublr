@@ -8,6 +8,9 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'auto',
     apiHost: 'http://localhost:4741/',
+    stripe: {
+      key: 'pk_test_2EkyoubsG8BaoffRyfAer9rS'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -35,14 +38,6 @@ module.exports = function (environment) {
       p + c.charCodeAt().toString(16), '')
     )
     ENV.apiHost = `http://localhost:${port}`
-    ENV.stripe = {
-      key: 'pk_test_2EkyoubsG8BaoffRyfAer9rS'
-    }
-    ENV['ember-simple-google-maps'] = {
-      url: 'https://maps.googleapis.com/maps/api/js',
-      version: '3.31',
-      apiKey: 'AIzaSyAxXDtsT0BphpRdrCQN9qEvarZA3_pvJBU'
-    }
   }
 
   if (environment === 'test') {
@@ -55,28 +50,12 @@ module.exports = function (environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false
 
     ENV.APP.rootElement = '#ember-testing'
-    ENV.stripe = {
-      key: 'pk_test_2EkyoubsG8BaoffRyfAer9rS'
-    }
-    ENV['ember-simple-google-maps'] = {
-      url: 'https://maps.googleapis.com/maps/api/js',
-      version: '3.31',
-      apiKey: 'AIzaSyAxXDtsT0BphpRdrCQN9qEvarZA3_pvJBU'
-    }
   }
 
   if (environment === 'production') {
     ENV.rootURL = '/FoodHubGrublr'
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://food-hub-grub-lr-api.herokuapp.com/'
-    ENV.stripe = {
-      key: 'pk_test_2EkyoubsG8BaoffRyfAer9rS'
-    }
-    ENV['ember-simple-google-maps'] = {
-      url: 'https://maps.googleapis.com/maps/api/js',
-      version: '3.31',
-      apiKey: 'AIzaSyAxXDtsT0BphpRdrCQN9qEvarZA3_pvJBU'
-    }
   }
 
   return ENV
