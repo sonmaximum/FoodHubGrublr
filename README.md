@@ -1,6 +1,6 @@
 # FoodHubGrublr
   
-  ![FoodHubGrublr](https://imgur.com/NLxKEig)
+![FoodHubGrublr](https://i.imgur.com/NLxKEig.png)
   
 ## Summary  
   
