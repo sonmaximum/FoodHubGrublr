@@ -9,7 +9,7 @@ module.exports = function (environment) {
     locationType: 'auto',
     apiHost: 'http://localhost:4741/',
     stripe: {
-      key: 'pk_test_2EkyoubsG8BaoffRyfAer9rS'
+      key: 'pk_test_VoQXZlf3KmSfKCvyBvvyeMxq'
     },
     EmberENV: {
       FEATURES: {
