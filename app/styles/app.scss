@@ -142,3 +142,14 @@ body {
 .fa:hover{
     cursor: pointer;
 }
+
+.loading-icon {
+  color: firebrick;
+  cursor: default !important;
+  font-size: 100px;
+}
+
+.loading-div {
+  margin-top: 20px;
+  text-align: center;
+}
