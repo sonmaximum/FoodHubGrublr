@@ -20,7 +20,7 @@ h1 {
 }
 
 .menu-col {
-  border-bottom: black solid 2px;
+  border-bottom: firebrick solid 2px;
 }
 
 .main-content {
@@ -51,6 +51,7 @@ h3 {
 h3 {
   margin-top: 5px;
 }
+
 .navbar {
   border-radius: 0;
 }
@@ -73,20 +74,24 @@ body {
 }
 
 .cart-heading {
-  border-bottom: black solid 1px;
+  border-bottom: #000 solid 1px;
+  margin: 0;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
 .cart-summary {
-  border-top: black solid 1px;
+  padding-top: 5px;
+  border-top: #000 solid 1px;
+  margin:0;
   font-weight: bold;
 }
 
 .owner-link {
-  margin: 0 auto;
   font-size: .85em;
-  text-align: center;
+  margin: 0 auto;
   margin-top: -10px;
+  text-align: center;
 }
 
 .stripebutton {
@@ -113,7 +118,12 @@ body {
     vertical-align: middle;
     white-space: nowrap;
 
-    :focus, .focus, :active:focus, .btn:active.focus, .active:focus, .active.focus {
+    :focus,
+    .focus,
+    :active:focus,
+    .btn:active.focus,
+    .active:focus,
+    .active.focus {
       background-color: #286090;
       border-color: #122b40;
       color: #fff;
@@ -121,26 +131,29 @@ body {
       outline-offset: -2px;
     }
 
-    :hover, .btn:focus, .btn.focus {
+    :hover,
+    .btn:focus,
+    .btn.focus {
       background-color: #286090;
       border-color: #204d74;
       color: #fff;
       text-decoration: none;
     }
 
-    :active, .active {
+    :active,
+    .active {
       background-color: #204d74;
       background-image: none;
       border-color: #122b40;
-      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
       color: #fff;
       outline: 0;
     }
   }
 }
 
-.fa:hover{
-    cursor: pointer;
+.fa:hover {
+  cursor: pointer;
 }
 
 .loading-icon {
@@ -150,6 +163,33 @@ body {
 }
 
 .loading-div {
-  margin-top: 20px;
+  margin-top: 8%;
   text-align: center;
+}
+
+.navbar {
+  background: firebrick;
+  li a {
+    color: lightyellow !important;
+  }
+}
+
+.navbar-default .navbar-brand {
+  color: lightyellow;
+}
+
+.no-pad {
+  padding: 0;
+  top: 10px;
+  left: -10px;
+}
+
+.main-content {
+  border: 2px solid firebrick;
+  margin-bottom: 50px;
+}
+
+.cart-border {
+  padding:5px;
+  border: 2px solid firebrick;
 }
